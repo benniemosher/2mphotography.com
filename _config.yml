@@ -1,4 +1,5 @@
-# Site settings
+timezone: "America/Denver"
+
 title: 2M Photography
 email: monique@2mphotography.com
 description: > # this means to ignore newlines until "baseurl:"

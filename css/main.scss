@@ -135,7 +135,7 @@ blockquote, q {
   width: calc(100% - #{$spacing-unit / 2} - #{$spacing-unit * 0.1});
 
   p {
-    margin-bottom: 1em !important;
+    margin-bottom: $spacing-unit !important;
   }
 }
 

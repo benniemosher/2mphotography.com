@@ -1,5 +1,6 @@
 section {
-  width: 600px;
+  width: 100%;
+  max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -8,5 +9,9 @@ section {
     width: calc(100% - #{ $spacing-unit * 2 });
     margin-left: $spacing-unit;
     margin-right: $spacing-unit;
+  }
+
+  h2, h2 a {
+    line-height: 1.3;
   }
 }

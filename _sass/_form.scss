@@ -6,6 +6,11 @@ textarea, input, select {
   -webkit-transition: all 0.22s linear;
   -moz-transition: all 0.22s linear;
   transition: all 0.22s linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
   background-color: #fff;
   border-radius: 2px;
   border: 1px solid $grey-color-light;
@@ -22,7 +27,7 @@ textarea, input, select {
   }
 
   &:hover {
-    border-color: $grey-color;
+    border-color: $grey-color-medium;
 
     @include placeholder {
       -webkit-transition: all 0.22s linear;
@@ -51,7 +56,7 @@ input {
 
 input[type="checkbox"], input[type="radio"] {
   display: inline;
-  margin-right: 5.25px;
+  margin-right: $spacing-unit / 0.2;
 }
 
 input, label, select {

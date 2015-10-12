@@ -5,17 +5,31 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
 
+// Font Weights
+$thin: 100;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
 // Our variables
-$base-font-family:        'Roboto', Helvetica, Arial, sans-serif;
+$max-width:               600px;
+$base-font-family:        'proxima-nova', 'Roboto', Helvetica, Arial, sans-serif;
 $base-font-size:          18px;
 $base-line-height:        1.5;
-$base-font-weight:        300;
+$base-font-weight:        $thin;
 
 $small-font-size:         $base-font-size * 0.875;
 
 $spacing-unit:            1.67em;
 
-$text-color:              #333;
+$small-icon-size:         $spacing-unit * 1.2;
+$large-icon-size:         $spacing-unit * 1.6;
+
+$text-color:              #333333;
 
 $brand-color:             #8f44ad;
 $brand-color-light:       lighten($brand-color, 10%);
@@ -57,13 +71,8 @@ $facebook-blue-dark:      darken($facebook-blue, 10%);
   line-height: $base-line-height;
 }
 
-html {
-  background: $brand-color;
-}
-
 body {
-  background: #fff;
-  border-top: 0.75em solid $brand-color;
+  border-top: $spacing-unit / 2 solid $brand-color;
   padding-top: $spacing-unit * 4;
 
   @include bp(iphone-6-plus-landscape) {
@@ -99,7 +108,6 @@ h1, h1 a {
 
 h2, h2 a {
   font-size: $base-font-size * 1.7;
-  line-height: 1.3;
 }
 
 h3, h3 a {
@@ -120,10 +128,11 @@ h6, h6 a {
 }
 
 blockquote, q {
-  border-left: 2px solid $grey-color-light;
-  margin: 1.5em 0;
-  padding-left: 0.75em;
+  border-left: $spacing-unit * 0.1 solid $grey-color-light;
+  margin: $spacing-unit 0;
+  padding-left: $spacing-unit / 2;
   quotes: none;
+  width: calc(100% - #{$spacing-unit / 2} - #{$spacing-unit * 0.1});
 
   p {
     margin-bottom: 1em !important;

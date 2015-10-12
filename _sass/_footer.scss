@@ -1,18 +1,11 @@
 footer {
   border-top: 1px solid $grey-color-light;
-  padding: 1em 5em;
-  width: calc(100% - 10em);
+  padding: $spacing-unit ( $spacing-unit * 3 );
+  width: calc(100% - #{ $spacing-unit * 6 });
   color: $grey-color-medium;
   font-weight: 100;
   display: inline-table;
-  position: fixed;
-  bottom: 0;
-
-  @include bp(ipad-mini-landscape) {
-    position: static;
-    bottom: auto;
-    margin-top: $spacing-unit * 2;
-  }
+  margin-top: $spacing-unit * 2;
 
   @include bp(iphone-6-plus-landscape) {
     width: calc(100% - #{ $spacing-unit * 2 });
@@ -27,13 +20,13 @@ footer {
 
   p {
     float: left;
-    font-size: 0.75em;
-    line-height: 36px;
+    font-size: $small-font-size;
+    line-height: $small-icon-size;
     color: $grey-color-medium;
 
     @include bp(iphone-6-plus-landscape) {
       font-size: $base-font-size;
-      line-height: 48px;
+      line-height: $large-icon-size;
     }
 
     @include bp(iphone-6-plus) {
@@ -44,7 +37,7 @@ footer {
     }
 
     @include bp(iphone-5) {
-      font-size: $base-font-size * 0.8;
+      font-size: $small-font-size;
     }
 
     @include bp(iphone-4-landscape) {
@@ -88,13 +81,13 @@ footer {
     a {
       display: block;
       margin-right: 1em;
-      width: 36px;
-      height: 36px;
+      width: $small-icon-size;
+      height: $small-icon-size;
       border: none;
 
       @include bp(iphone-6-plus-landscape) {
-        width: 48px;
-        height: 48px;
+        width: $large-icon-size;
+        height: $large-icon-size;
       }
 
       &:hover {
@@ -135,12 +128,12 @@ footer {
     }
 
     svg {
-      width: 36px;
-      height: 36px;
+      width: $small-icon-size;
+      height: $small-icon-size;
 
       @include bp(iphone-6-plus-landscape) {
-        width: 48px;
-        height: 48px;
+        width: $large-icon-size;
+        height: $large-icon-size;
       }
 
       path {

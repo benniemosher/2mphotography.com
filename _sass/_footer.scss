@@ -1,0 +1,151 @@
+footer {
+  border-top: 1px solid $grey-color-light;
+  padding: 1em 5em;
+  width: calc(100% - 10em);
+  color: $grey-color-medium;
+  font-weight: 100;
+  display: inline-table;
+  position: fixed;
+  bottom: 0;
+
+  @include bp(ipad-mini-landscape) {
+    position: static;
+    bottom: auto;
+    margin-top: $spacing-unit * 2;
+  }
+
+  @include bp(iphone-6-plus-landscape) {
+    width: calc(100% - #{ $spacing-unit * 2 });
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+    margin-top: $spacing-unit;
+  }
+
+  p, ul {
+    margin: 0;
+  }
+
+  p {
+    float: left;
+    font-size: 0.75em;
+    line-height: 36px;
+    color: $grey-color-medium;
+
+    @include bp(iphone-6-plus-landscape) {
+      font-size: $base-font-size;
+      line-height: 48px;
+    }
+
+    @include bp(iphone-6-plus) {
+      line-height: 1;
+      padding-bottom: 1em;
+      text-align: center;
+      width: 100%;
+    }
+
+    @include bp(iphone-5) {
+      font-size: $base-font-size * 0.8;
+    }
+
+    @include bp(iphone-4-landscape) {
+      width: 100%;
+      text-align: center;
+      line-height: 1;
+      margin-bottom: $spacing-unit / 2;
+    }
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+
+    @include bp(iphone-6-plus) {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      display: table;
+      padding-left: 0;
+    }
+
+    @include bp(iphone-4-landscape) {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      display: table;
+      padding-left: 0;
+    }
+
+    li {
+      float: left;
+
+      &:last-of-type {
+        a {
+          margin-right: 0;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      margin-right: 1em;
+      width: 36px;
+      height: 36px;
+      border: none;
+
+      @include bp(iphone-6-plus-landscape) {
+        width: 48px;
+        height: 48px;
+      }
+
+      &:hover {
+        border-bottom: none;
+
+        path {
+          fill: $brand-color;
+        }
+      }
+
+      &[href*="racecarstudio"] {
+        &:hover {
+          path {
+            fill: $racecarstudio-red;
+          }
+        }
+
+        &:active, &:focus {
+          path {
+            fill: $racecarstudio-red-dark;
+          }
+        }
+      }
+
+      &[href*="facebook"] {
+        &:hover {
+          path {
+            fill: $facebook-blue;
+          }
+        }
+
+        &:active, &:focus {
+          path {
+            fill: $facebook-blue-dark;
+          }
+        }
+      }
+    }
+
+    svg {
+      width: 36px;
+      height: 36px;
+
+      @include bp(iphone-6-plus-landscape) {
+        width: 48px;
+        height: 48px;
+      }
+
+      path {
+        fill: $grey-color-medium;
+      }
+    }
+  }
+}

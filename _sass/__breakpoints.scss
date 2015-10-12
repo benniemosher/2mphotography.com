@@ -1,0 +1,48 @@
+// Device Widths
+$iphone-4-landscape: 480px;
+$iphone-5: 320px;
+$iphone-5-landscape: 568px;
+$iphone-6-plus: 414px;
+$iphone-6-plus-landscape: 736px;
+
+$ipad-mini: 768px;
+$ipad-mini-landscape: 1024px;
+
+@mixin bp($point) {
+
+  $bp-iphone-4-landscape-only: "(width: #{$iphone-4-landscape})";
+  $bp-iphone-4-landscape: "(max-width: #{$iphone-4-landscape})";
+  $bp-iphone-5: "(max-width: #{$iphone-5})";
+  $bp-iphone-5-landscape: "(max-width: #{$iphone-5-landscape})";
+  $bp-iphone-6-plus: "(max-width: #{$iphone-6-plus})";
+  $bp-iphone-6-plus-landscape: "(max-width: #{$iphone-6-plus-landscape})";
+
+  $bp-ipad-mini: "(max-width: #{$ipad-mini})";
+  $bp-ipad-mini-landscape: "(max-width: #{$ipad-mini-landscape})";
+
+  @if $point == iphone-4-landscape-only {
+    @media #{$bp-iphone-4-landscape-only} { @content; }
+  }
+  @else if $point == iphone-4-landscape {
+    @media #{$bp-iphone-4-landscape} { @content; }
+  }
+  @else if $point == iphone-5 {
+    @media #{$bp-iphone-5} { @content; }
+  }
+  @else if $point == iphone-5-landscape {
+    @media #{$bp-iphone-5-landscape} { @content; }
+  }
+  @else if $point == iphone-6-plus {
+    @media #{$bp-iphone-6-plus} { @content; }
+  }
+  @else if $point == iphone-6-plus-landscape {
+    @media #{$bp-iphone-6-plus-landscape} { @content; }
+  }
+  @else if $point == ipad-mini {
+    @media #{$bp-ipad-mini} { @content; }
+  }
+  @else if $point == ipad-mini-landscape {
+    @media #{$bp-ipad-mini-landscape} { @content; }
+  }
+
+}

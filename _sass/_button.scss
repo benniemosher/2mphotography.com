@@ -1,0 +1,40 @@
+button, .button, input[type="submit"] {
+  background-color: $brand-color;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: $brand-color-light;
+  }
+
+  &:active, &:focus {
+    background-color: $brand-color-dark;
+  }
+}
+
+button, .button, input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  padding: ($spacing-unit / 2) $spacing-unit;
+  user-select: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+}
+
+.button-pending {
+  -webkit-animation: pulse 3s infinite;
+  -moz-animation: pulse 3s infinite;
+  animation: pulse 3s infinite;
+}

@@ -1,0 +1,12 @@
+section {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  @include bp(iphone-6-plus-landscape) {
+    width: calc(100% - #{ $spacing-unit * 2 });
+    margin-left: $spacing-unit;
+    margin-right: $spacing-unit;
+  }
+}

@@ -1,0 +1,74 @@
+form {
+  width: 100%;
+}
+
+textarea, input, select {
+  -webkit-transition: all 0.22s linear;
+  -moz-transition: all 0.22s linear;
+  transition: all 0.22s linear;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid $grey-color-light;
+  box-shadow: none;
+  margin-bottom: $spacing-unit;
+  padding: $spacing-unit / 2;
+  resize: vertical;
+  width: 100%;
+  color: $brand-color;
+
+  @include bp(iphone-6-plus-landscape) {
+    padding: ( $spacing-unit / 2 ) 0;
+    text-indent: $spacing-unit / 2;
+  }
+
+  &:hover {
+    border-color: $grey-color;
+
+    @include placeholder {
+      -webkit-transition: all 0.22s linear;
+      -moz-transition: all 0.22s linear;
+      transition: all 0.22s linear;
+      color: $grey-color-medium;
+    }
+  }
+
+  &:focus {
+    border-color: $brand-color;
+    outline: none;
+
+    @include placeholder {
+      -webkit-transition: all 0.22s linear;
+      -moz-transition: all 0.22s linear;
+      transition: all 0.22s linear;
+      color: $grey-color-light;
+    }
+  }
+}
+
+input {
+  resize: none;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+  margin-right: 5.25px;
+}
+
+input, label, select {
+  display: block;
+}
+
+input[type="submit"], button {
+  width: 50%;
+
+  @include bp(iphone-6-plus-landscape) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+textarea {
+  padding-top: $spacing-unit / 3.75;
+  height: $spacing-unit * 4.17;
+}

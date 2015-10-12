@@ -1,0 +1,37 @@
+header {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $spacing-unit * 3;
+
+  @include bp(iphone-6-plus-landscape) {
+    width: calc(100% - #{ $spacing-unit * 2 });
+    margin-left: $spacing-unit;
+    margin-right: $spacing-unit;
+    margin-bottom: $spacing-unit;
+    display: block;
+  }
+
+  a {
+    border: none;
+
+    @include bp(iphone-6-plus-landscape) {
+      width: 100%;
+    }
+
+    &:hover {
+      border: none;
+    }
+  }
+
+  a, img {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

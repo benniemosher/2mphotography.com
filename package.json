@@ -1,4 +1,10 @@
 {
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/benniemosher/2mphotography.git"
+  },
+  "author": "Bennie Mosher <benniemosher@gmail.com> (http://benniemosher.com)",
+  "license": "MIT",
   "dependencies": {
     "normalize.css": "^3.0.3",
     "purecss": "^0.6.0"

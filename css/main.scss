@@ -73,7 +73,8 @@ $facebook-blue-dark:      darken($facebook-blue, 10%);
 
 body {
   border-top: $spacing-unit / 2 solid $brand-color;
-  padding-top: $spacing-unit * 4;
+  margin: 0;
+  padding: ($spacing-unit * 4) 0 0 0;
 
   @include bp(iphone-6-plus-landscape) {
     padding-top: $spacing-unit;

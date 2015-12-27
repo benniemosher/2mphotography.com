@@ -1,19 +1,25 @@
 timezone: "America/Denver"
 
 title: 2M Photography
-email: monique@2mphotography.com
+email: 2mphotography.co@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://2mphotography.com" # the base hostname & protocol for your site
+url: "https://2mphotography.com" # the base hostname & protocol for your site
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - node_modules
   - package.json
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+sass:
+  sass_dir: _sass
+  style: :compressed
 
 # Build settings
 markdown: kramdown
